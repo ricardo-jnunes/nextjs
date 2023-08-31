@@ -16,10 +16,15 @@ Incremental Static Regeneration: O Next.js também introduziu o conceito de Incr
 
 # Configurações
 √ Would you like to use TypeScript? ... Yes - É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática 
+
 √ Would you like to use ESLint? ... Yes - É ferramenta de análise estática, para as linguagens Javascript e Typescript, sendo o mais popular do mundo para tais linguagens. As regras do ESLint são customizáveis, cobrindo tanto problemas de qualidade de software como de estilo/formatação. 
+
 √ Would you like to use Tailwind CSS? ... Yes - Framework Componentes UI e utilitários para projetos que usam CSS.
+
 √ Would you like to use `src/` directory? ... Yes - Definição do diretório que terá as páginas, estilos, etc. do restante de arquivos do projeto NextJS.
+
 √ Would you like to use App Router? (recommended) ... Yes - O App Router é um novo módulo Next.js 13, projetado para resolver algumas das limitações da abordagem do Pages Directory (Cada arquivo na pasta pages corresponde a uma rota no aplicativo). Embora o aplicativo do roteador ainda use o diretório de pastas para roteamento, ele faz isso com uma convenção um pouco diferente. o App Router que é um componente de roteamento interno que permite que você navegue entre páginas do aplicativo sem a necessidade de recarregar a página inteira. Você pode usar o componente Link do Next.js para criar links de navegação e o módulo next/router para redirecionar programaticamente
+
 √ Would you like to customize the default import alias? ... No - Usar o default  @/
 
 
