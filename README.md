@@ -27,6 +27,8 @@ Incremental Static Regeneration: O Next.js também introduziu o conceito de Incr
 
 √ Would you like to customize the default import alias? ... No - Usar o default  @/
 
+## Tailwind
+Reuso de componentes feitos por [khatabwedaa](https://tailwindcomponents.com/component/e-commerce-home-page)
 
 ## Getting Started
 

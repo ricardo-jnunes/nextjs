@@ -16,7 +16,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+      <body className={inter.className}>
+        <header>
+          <nav className="sm:flex sm:justify-center sm:items-center mt-4">
+            <div className="flex flex-col sm:flex-row">
+              <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="/">Home</a>
+              <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="/shop">Shop</a>
+              <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="/about">About</a>
+            </div>
+          </nav>
+        </header>
+        {children}
+        <footer className="bg-gray-200">
+          <div className="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="/about" className="text-xl font-bold text-gray-500 hover:text-gray-400">Nunes</a>
+            <p className="py-2 text-gray-500 sm:py-0">All rights reserved</p>
+          </div>
+        </footer>
+      </body>
+    </html >
   )
 }
