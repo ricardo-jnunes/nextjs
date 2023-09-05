@@ -30,6 +30,11 @@ Incremental Static Regeneration: O Next.js também introduziu o conceito de Incr
 ## Tailwind
 Reuso de componentes feitos por [khatabwedaa](https://tailwindcomponents.com/component/e-commerce-home-page)
 
+## GraphQL
+
+`npm install @apollo/client graphql`
+
+
 ## Getting Started
 
 First, run the development server:
