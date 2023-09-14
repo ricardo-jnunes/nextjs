@@ -26,6 +26,12 @@ export default function RootLayout({
               <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="/about">About</a>
             </div>
           </nav>
+          <nav className="sm:flex sm:justify-center sm:items-center mt-4">
+            <div className="flex flex-col sm:flex-row">
+              <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="/ssr">Testing Server-side Rendering</a>
+              <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="/csr">Testing Client-side Rendering</a>
+            </div>
+          </nav>
         </header>
         {children}
         <footer className="bg-gray-200">

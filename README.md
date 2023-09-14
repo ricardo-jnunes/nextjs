@@ -8,11 +8,22 @@ Estudos com Next.js
 - É um framework de React
 - Permite várias opções de renderização, incluindo Client Side Rendering (CSR), Server Side Rendering (SSR) e Static Site Generation (SSG), sendo Server Rendered por Default.
 
-Server Side Rendering (SSR): Nesse modelo, a renderização inicial é feita no servidor, que envia o HTML renderizado para o cliente. Isso é benéfico para melhorar o tempo de carregamento inicial e o SEO, uma vez que os motores de busca podem indexar o conteúdo renderizado no servidor.
+Client-side Rendering (CSR): O navegador faz o downaload do mínimo de HTML e JavaScript para a página. Então o JS é usado para atualizar o DOM e renderizar a página. Uma das formas de habilitar CSR é usando hook useEffect() do React no lugar dos métodos  (getStaticProps and getServerSideProps) ou utilizando alguma biblioteca como SWR ou React Query, para buscar os dados e usá-los para montar a página.
 
-Static Site Generation (SSG): Nesse modelo, as páginas são renderizadas no momento da construção e o HTML estático é gerado. Isso é excelente para melhorar o desempenho, pois os usuários recebem conteúdo estático que pode ser servido de maneira rápida por uma CDN (Content Delivery Network).
+Server Side Rendering (SSR): Nesse modelo, a renderização inicial é feita no servidor, que envia o HTML renderizado para o cliente. Isso é benéfico para melhorar o tempo de carregamento inicial e o SEO, uma vez que os motores de busca podem indexar o conteúdo renderizado no servidor. Em todo request, a página HTML é gerada.
+
+Static Site Generation (SSG): Nesse modelo, as páginas são renderizadas no momento da construção/build e o HTML estático é gerado. Isso é excelente para melhorar o desempenho, pois os usuários recebem conteúdo estático que pode ser servido de maneira rápida por uma CDN (Content Delivery Network).
 
 Incremental Static Regeneration: O Next.js também introduziu o conceito de Incremental Static Regeneration, que combina elementos do SSG e do SSR. Isso permite que as páginas sejam pré-renderizadas no momento da construção e, em seguida, sejam revalidadas e atualizadas sob demanda, mantendo o conteúdo atualizado sem a necessidade de uma nova renderização completa.
+
+### Importante sobre App Router
+Páginas no diretório app, são Server Rendering por default.
+Os métodos getServerSideProps, getStaticProps and getInitialProps foram alterados por uma API mais simples.
+
+- CSR
+    Buscando dados pelo lado do cliente, a diretiva `use client` no inicio do arquivos, todos os módulos importados nele e componentes filhos serão considerados como um pacote do lado do cliente.
+- SSR 
+    No lado do servidor, é usado a API Fetch para realizar as chamadas, assim como para configurar as caches e revalidar comportamentos.
 
 # Configurações
 √ Would you like to use TypeScript? ... Yes - É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática 
